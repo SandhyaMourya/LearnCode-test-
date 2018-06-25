@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Home</title>
+    <link rel="icon" href="img/titleIcon1.png">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="corestyle/stle.css">
+ 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Search Wrapper Area Start -->
+    <div class="search-wrapper section-padding-100">
+        <div class="search-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-content">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type your keyword..." autocomplete="off">
+                            <button type="submit"><img src="img/core-img/search.png" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Wrapper Area End -->
+
+    <!-- ##### Main Content Wrapper Start ##### -->
+    <div class="main-content-wrapper d-flex clearfix">
+
+        <!-- Mobile Nav (max width 767px)-->
+        <div class="mobile-nav">
+            <!-- Navbar Brand -->
+            <div class="amado-navbar-brand">
+                <a href="index.html"><img src="img/titleIcon1.png" alt=""></a>
+            </div>
+            <!-- Navbar Toggler -->
+            <div class="amado-navbar-toggler">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <!-- Header Area Start -->
+        <header class="header-area clearfix">
+            <!-- Close Icon -->
+            <div class="nav-close">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="img/titleIcon1.png" alt="" width="120" height="120"></a>
+            </div>
+            <!-- amado Nav -->
+            <nav class="amado-nav">
+                <ul>
+					<li><a href="index.html" style="text-decoration:none;">Home</a></li>
+                   <li><a href="palindrome.html" style="text-decoration:none;">Palindrome program</a></li>
+                    <li class="active"><a href="fibonacci.html" style="text-decoration:none;">Fibonacci Series</a></li>
+                    <li><a href="Factorial.html" style="text-decoration:none;">Factorial Series</a></li>
+                    <li><a href="BubbleSort.html" style="text-decoration:none;">Bubble Sort</a></li>
+                    <li><a href="LargeNoInArr.html" style="text-decoration:none;">3rd Largest number in an array</a></li>
+                </ul>
+            </nav>
+			<br/>
+           
+        </header>
+        <!-- Header Area End -->
+	<div class="products-catagories-area clearfix">	
+	<div class="container">
+	<h3>Fibonacci Series in Java:</h3>
+	  <h5>In fibonacci series, next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. The first two numbers of fibonacci series are 0 and 1.</h5>
+
+       <h6>There are two ways to write the fibonacci series program in java:<h6>
+		<ul>
+			<li>Fibonacci Series without using recursion</li>
+			<li>Fibonacci Series using recursion</li>
+		</ul>
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#home">C</a></li>
+		<li><a data-toggle="tab" href="#menu1">C++</a></li>
+		<li><a data-toggle="tab" href="#menu2">Java</a></li>
+		<li><a data-toggle="tab" href="#menu3">Python</a></li>
+	</ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <p>
+	 <xmp>
+	#include <stdio.h>
+	int main()
+	{
+		int i, n, t1 = 0, t2 = 1, nextTerm;
+
+		printf("Enter the number of terms: ");
+		scanf("%d", &n);
+
+		printf("Fibonacci Series: ");
+
+		for (i = 1; i <= n; ++i)
+		{
+			printf("%d, ", t1);
+			nextTerm = t1 + t2;
+			t1 = t2;
+			t2 = nextTerm;
+		}
+		return 0;
+	}
+	  </xmp>
+	  </p>
+	  <h3>Output</h3>
+		<div class="codeblock3">
+		<pre>
+	Enter the number of terms: 10
+	Fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 
+		</pre></div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+	<p><xmp>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
+
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    cout << "Fibonacci Series: ";
+
+    for (int i = 1; i <= n; ++i)
+    {
+        // Prints the first two terms.
+        if(i == 1)
+        {
+            cout << " " << t1;
+            continue;
+        }
+        if(i == 2)
+        {
+            cout << t2 << " ";
+            continue;
+        }
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+        
+        cout << nextTerm << " ";
+    }
+    return 0;
+}
+	</xmp></p>
+	<h3>Output</h3>
+	<div class="codeblock3"><pre>
+Enter the number of terms: 10
+Fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 
+	</pre></div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+	  <xmp>
+ class FibonacciExample1{  
+	public static void main(String args[])  
+	{    
+	 int n1=0,n2=1,n3,i,count=10;    
+	 System.out.print(n1+" "+n2);//printing 0 and 1    
+		
+	 for(i=2;i<count;++i)//loop starts from 2 because 0 and 1 are already printed    
+	 {    
+	  n3=n1+n2;    
+	  System.out.print(" "+n3);    
+	  n1=n2;    
+	  n2=n3;    
+	 }    
+	 }
+	}  
+</xmp>
+<h3>Output</h3>
+<div class="codeblock3"><pre>0 1 1 2 3 5 8 13 21 34
+</pre></div>
+		</div>
+    <div id="menu3" class="tab-pane fade">
+      <p>
+	  <xmp>
+# Program to display the Fibonacci sequence up to n-th term where n is provided by the user
+
+# change this value for a different result
+nterms = 10
+
+# uncomment to take input from the user
+#nterms = int(input("How many terms? "))
+
+# first two terms
+n1 = 0
+n2 = 1
+count = 0
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Please enter a positive integer")
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence upto",nterms,":")
+   while count < nterms:
+       print(n1,end=' , ')
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
+	   </xmp>
+	  </p>
+	  <h3>Output</h3>
+	<div class="codeblock3"><pre>
+	Fibonacci sequence upto 10 :
+	0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+	</pre></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+			
+		
+        <!-- ##### Footer Area Start ##### -->
+   <footer class="footer_area clearfix">
+        <div class="container">
+            
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>

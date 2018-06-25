@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Home</title>
+    <link rel="icon" href="img/titleIcon1.png">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="corestyle/stle.css">
+ 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Search Wrapper Area Start -->
+    <div class="search-wrapper section-padding-100">
+        <div class="search-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-content">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type your keyword..." autocomplete="off">
+                            <button type="submit"><img src="img/core-img/search.png" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Wrapper Area End -->
+
+    <!-- ##### Main Content Wrapper Start ##### -->
+    <div class="main-content-wrapper d-flex clearfix">
+
+        <!-- Mobile Nav (max width 767px)-->
+        <div class="mobile-nav">
+            <!-- Navbar Brand -->
+            <div class="amado-navbar-brand">
+                <a href="index.html"><img src="img/titleIcon1.png" alt=""></a>
+            </div>
+            <!-- Navbar Toggler -->
+            <div class="amado-navbar-toggler">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <!-- Header Area Start -->
+        <header class="header-area clearfix">
+            <!-- Close Icon -->
+            <div class="nav-close">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="img/titleIcon1.png" alt="" width="120" height="120"></a>
+            </div>
+            <!-- amado Nav -->
+            <nav class="amado-nav">
+                <ul>
+					<li><a href="index.html" style="text-decoration:none;">Home</a></li>
+                    <li><a href="palindrome.html" style="text-decoration:none;">Palindrome program</a></li>
+                    <li><a href="fibonacci.html" style="text-decoration:none;">Fibonacci Series</a></li>
+                    <li class="active"><a href="Factorial.html" style="text-decoration:none;">Factorial Series</a></li>
+                    <li><a href="BubbleSort.html" style="text-decoration:none;">Bubble Sort</a></li>
+                    <li><a href="LargeNoInArr.html" style="text-decoration:none;">3rd Largest number in an array</a></li>
+                </ul>
+            </nav>
+			<br/>
+            
+        </header>
+        <!-- Header Area End -->
+	<div class="products-catagories-area clearfix">	
+	<div class="container">
+	<h3>Factorial of n in Python:</h3>
+	  <p>The factorial of a positive number n is given by:</p>
+	  <div class="codeblock3">
+	  <p>factorial of n (n!) = 1*2*3*4....n</p>
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#home">C</a></li>
+		<li><a data-toggle="tab" href="#menu1">C++</a></li>
+		<li><a data-toggle="tab" href="#menu2">Java</a></li>
+		<li><a data-toggle="tab" href="#menu3">Python</a></li>
+	</ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+	  </div>
+	<p>
+	 <xmp>
+	#include <stdio.h>
+	int main()
+	{
+		int n, i;
+		unsigned long long factorial = 1;
+
+		printf("Enter an integer: ");
+		scanf("%d",&n);
+
+		// show error if the user enters a negative integer
+		if (n < 0)
+			printf("Error! Factorial of a negative number doesn't exist.");
+
+		else
+		{
+			for(i=1; i<=n; ++i)
+			{
+				factorial *= i;              // factorial = factorial*i;
+			}
+			printf("Factorial of %d = %llu", n, factorial);
+		}
+
+		return 0;
+	}
+	  </xmp>
+	  </p>
+	  <h3>Output</h3>
+		<div class="codeblock3">
+		<pre>
+	Enter an integer: 10
+	Factorial of 10 = 3628800
+		</pre></div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+	  </div>
+	<p><xmp>
+	#include <iostream>
+	using namespace std;
+
+	int main()
+	{
+		unsigned int n;
+		unsigned long long factorial = 1;
+
+		cout << "Enter a positive integer: ";
+		cin >> n;
+
+		for(int i = 1; i <=n; ++i)
+		{
+			factorial *= i;
+		}
+
+		cout << "Factorial of " << n << " = " << factorial;    
+		return 0;
+	}
+	</xmp></p>
+	<h3>Output</h3>
+	<div class="codeblock3"><pre>
+	Enter a positive integer: 12
+	Factorial of 12 = 479001600
+	</pre></div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+	  </div>
+	  <xmp>
+  // Java program to find factorial of given number
+class Test
+{
+    // method to find factorial of given number
+    static int factorial(int n)
+    {
+        if (n == 0)
+          return 1;
+        
+        return n*factorial(n-1);
+    }
+    
+    // Driver method
+    public static void main(String[] args) 
+    {
+        int num = 5;
+        System.out.println("Factorial of "+ num + " is " + factorial(5));
+    }
+}
+</xmp>
+<h3>Output</h3>
+<div class="codeblock3"><pre>Factorial of 5 is 120
+</pre></div>
+		</div>
+    <div id="menu3" class="tab-pane fade">
+	  </div>
+      <p>
+	  <xmp>
+# Python program to find the factorial of a number provided by the user.
+
+# change the value for a different result
+num = 7
+
+# uncomment to take input from the user
+#num = int(input("Enter a number: "))
+
+factorial = 1
+
+# check if the number is negative, positive or zero
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
+	  </xmp>
+	  </p>
+	  <h3>Output</h3>
+	<div class="codeblock3"><pre>
+	The factorial of 7 is 5040
+	</pre></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+			
+		
+        <!-- ##### Footer Area Start ##### -->
+   <footer class="footer_area clearfix">
+        <div class="container">
+            
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>

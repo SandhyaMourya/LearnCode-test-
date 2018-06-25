@@ -1,0 +1,53 @@
+xmp{
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	overflow:auto;
+	
+}
+.codeblock3 {
+    width: 100%;
+    margin: 8px 0 0;
+    background: #f9fbf9;
+    padding: 0 0 0 5px;
+    font-family: verdana;
+}
+.tab-content{
+	width:100%;
+}
+body{
+	overflow-x:hidden;
+}
+
+
+
+@media (min-width: 992px)
+header.masthead {
+    height: 100vh;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-primary {
+    background-color: #f05f40!important;
+}
+section {
+    padding: 8rem 0;
+}
+

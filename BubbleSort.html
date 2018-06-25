@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Home</title>
+    <link rel="icon" href="img/titleIcon1.png">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="corestyle/stle.css">
+ 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Search Wrapper Area Start -->
+    <div class="search-wrapper section-padding-100">
+        <div class="search-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-content">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type your keyword..." autocomplete="off">
+                            <button type="submit"><img src="img/core-img/search.png" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Wrapper Area End -->
+
+    <!-- ##### Main Content Wrapper Start ##### -->
+    <div class="main-content-wrapper d-flex clearfix">
+
+        <!-- Mobile Nav (max width 767px)-->
+        <div class="mobile-nav">
+            <!-- Navbar Brand -->
+            <div class="amado-navbar-brand">
+                <a href="index.html"><img src="img/titleIcon1.png" alt=""></a>
+            </div>
+            <!-- Navbar Toggler -->
+            <div class="amado-navbar-toggler">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <!-- Header Area Start -->
+        <header class="header-area clearfix">
+            <!-- Close Icon -->
+            <div class="nav-close">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="img/titleIcon1.png" alt="" width="120" height="120"></a>
+            </div>
+            <!-- amado Nav -->
+            <nav class="amado-nav">
+                <ul>
+					<li><a href="index.html" style="text-decoration:none;">Home</a></li>
+                    <li><a href="palindrome.html" style="text-decoration:none;">Palindrome program</a></li>
+                    <li><a href="fibonacci.html" style="text-decoration:none;">Fibonacci Series</a></li>
+                    <li><a href="Factorial.html" style="text-decoration:none;">Factorial Series</a></li>
+                    <li class="active"><a href="BubbleSort.html" style="text-decoration:none;">Bubble Sort</a></li>
+                    <li><a href="LargeNoInArr.html" style="text-decoration:none;">3rd Largest number in an array</a></li>
+                </ul>
+            </nav>
+			<br/>
+            
+        </header>
+        <!-- Header Area End -->
+	<div class="products-catagories-area clearfix">	
+		<div class="container">
+			<h3>Bubble Sort in C:</h3>
+			<p>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent 
+			elements if they are in wrong order.
+			</p>
+			<pre>
+Example:
+First Pass:
+( 5 1 4 2 8 ) –> ( 1 5 4 2 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
+( 1 5 4 2 8 ) –>  ( 1 4 5 2 8 ), Swap since 5 > 4
+( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not 
+swap them.
+
+Second Pass:
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 )
+( 1 4 2 5 8 ) –> ( 1 2 4 5 8 ), Swap since 4 > 2
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –>  ( 1 2 4 5 8 )
+Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs
+ one whole pass without any swap to know it is sorted.
+
+Third Pass:
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+	  </pre>
+	  <p>Following is the implementation:</p>
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#home">C</a></li>
+		<li><a data-toggle="tab" href="#menu1">C++</a></li>
+		<li><a data-toggle="tab" href="#menu2">Java</a></li>
+		<li><a data-toggle="tab" href="#menu3">Python</a></li>
+	</ul>
+   
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+       <p>
+	 <xmp>
+	#include<stdio.h>  
+	int main()    
+	{    
+	int n,r,sum=0,temp;    
+	printf("enter the number=");    
+	scanf("%d",&n);    
+	temp=n;    
+	while(n>0)    
+	{    
+	r=n%10;    
+	sum=(sum*10)+r;    
+	n=n/10;    
+	}    
+	if(temp==sum)    
+	printf("palindrome number ");    
+	else    
+	printf("not palindrome");   
+	return 0;  
+	}   
+	  </xmp>
+	  </p>
+	  <h3>Output</h3>
+		<div class="codeblock3">
+		<pre>
+	enter the number=151
+	palindrome  number
+		</pre></div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+	<h3>Bubble Sort  in C++:</h3>
+	  <h5>A palindrome number is a number that is same after reverse.</h5> 
+	  <h6>For example 545, 151, 34543, 343, 171, 48984 are the palindrome numbers. It can also be a string like LOL, MADAM etc.<h6>
+	<p><xmp>
+	#include <iostream>
+	using namespace std;
+
+	int main()
+	{
+		 int n, num, digit, rev = 0;
+
+		 cout << "Enter a positive number: ";
+		 cin >> num;
+
+		 n = num;
+
+		 do
+		 {
+			 digit = num % 10;
+			 rev = (rev * 10) + digit;
+			 num = num / 10;
+		 } while (num != 0);
+
+		 cout << " The reverse of the number is: " << rev << endl;
+
+		 if (n == rev)
+			 cout << " The number is a palindrome";
+		 else
+			 cout << " The number is not a palindrome";
+
+		return 0;
+	}
+	</xmp></p>
+	<h3>Output</h3>
+	<div class="codeblock3"><pre>
+	Enter a positive number: 12321
+	The reverse of the number is: 12321
+	The number is a palindrome
+	</pre></div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Bubble Sort in Java:</h3>
+	  <h5>A palindrome number is a number that is same after reverse.</h5> 
+	  <h6>For example 545, 151, 34543, 343, 171, 48984 are the palindrome numbers. It can also be a string like LOL, MADAM etc.<h6>
+	  <xmp>
+  public class BubbleSortExample {  
+    static void bubbleSort(int[] arr) {  
+        int n = arr.length;  
+        int temp = 0;  
+         for(int i=0; i < n; i++){  
+                 for(int j=1; j < (n-i); j++){  
+                          if(arr[j-1] > arr[j]){  
+                                 //swap elements  
+                                 temp = arr[j-1];  
+                                 arr[j-1] = arr[j];  
+                                 arr[j] = temp;  
+                         }  
+                          
+                 }  
+         }  
+  
+    }  
+    public static void main(String[] args) {  
+                int arr[] ={3,60,35,2,45,320,5};  
+                 
+                System.out.println("Array Before Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+                System.out.println();  
+                  
+                bubbleSort(arr);//sorting array elements using bubble sort  
+                 
+                System.out.println("Array After Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+   
+        }  
+}  
+
+</xmp>
+<h3>Output</h3>
+<div class="codeblock3"><pre>
+	Array Before Bubble Sort
+	3 60 35 2 45 320 5 
+	Array After Bubble Sort
+	2 3 5 35 45 60 320 
+</pre></div>
+		</div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Bubble Sort in Python:</h3>
+	  <h5>A palindrome number is a number that is same after reverse.</h5>
+	  <h6>For example 545, 151, 34543, 343, 171, 48984 are the palindrome numbers. It can also be a string like LOL, MADAM etc.<h6>
+      <p>
+	  <xmp>
+		# Program to check if a string
+		#  is palindrome or not
+
+		# change this value for a different output
+		my_str = 'aIbohPhoBiA'
+
+		# make it suitable for caseless comparison
+		my_str = my_str.casefold()
+
+		# reverse the string
+		rev_str = reversed(my_str)
+
+		# check if the string is equal to its reverse
+		if list(my_str) == list(rev_str):
+		   print("It is palindrome")
+		else:
+		   print("It is not palindrome")
+	  </xmp>
+	  </p>
+	  <h3>Output</h3>
+	<div class="codeblock3"><pre>It is palindrome
+	</pre></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+			
+		
+        <!-- ##### Footer Area Start ##### -->
+   <footer class="footer_area clearfix">
+        <div class="container">
+            
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>
